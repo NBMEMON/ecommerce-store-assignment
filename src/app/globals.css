@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +25,721 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+*{
+  margin:0px;
+  padding:0px;
+}
+#header {
+  width: 100%; /* Use full width */
+  height: 88px;
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+  
+  margin: 15px;
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+#logo {
+  width: 65px;
+  height: 22px;
+  margin-right: 50px; /* Spacing between logo and search bar */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(240, 237, 237); /* Grey background */
+  border-radius: 10px;
+  padding: 5px 15px;
+  width: 372px;
+  max-width: 500px;
+  height: 56px;
+  margin-right: 50px; /* Spacing between search bar and navbar */
+   /* Added missing semicolon */
+  
+}
+
+.search-input {
+  flex-grow: 1; /* Allows the input to take the remaining space */
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color :black;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px; /* Ensures some space between the button and the input */
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: grey;
+}
+
+#home {
+  font-weight: bolder;
+  color: black;
+  font-size: 16px;
+}
+
+#icon {
+  width: 144px;
+  height: 32px;
+  margin-left:50px;
+}
+/* homepage */
+/* Banner Section Start Here */
+.banner {
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  align-items: center; /* Vertically centers the content */
+  width: 100%;
+  height: 632px;
+  border: 2px solid black;
+  margin: 0;
+  background-color: #211C24;
+}
+
+#iphone {
+  margin-left: auto; /* Pushes the image to the right */
+  margin-right: 150px;
+  
+  }
+ 
+
+.slide-in-blurred-right {
+	-webkit-animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between; /* Creates space between left and right aligned content */
+  align-items: center; /* Vertically centers the content */
+  width: 100%;
+  height: 632px;
+  border: 2px solid black;
+  margin: 0;
+  padding: 0 20px; /* Optional: Adds horizontal padding */
+  background-color: #211C24;
+}
+
+#left-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns text to the left within #left-text */
+  max-width: 50%; /* Optional: Limits the width of the text container */
+  margin-left:150px;
+}
+
+#top-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color:#909090 
+}
+
+#h2-bold {
+  font-size: 75px;
+  font-weight: bold;
+  display: inline;
+  color:white;
+  font-family: 'Inter', sans-serif;
+}
+h2{
+  font-size: 75px;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif
+}
+.iphone14 {
+  font-size: 75px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Ensures text overflows are hidden */
+  white-space: nowrap; /* Keeps text on one line */
+  border-right: 4px solid white; /* Initial blinking cursor effect */
+  width: 0; /* Start with zero width */
+  animation: 
+    typing 3.5s steps(40, end) forwards, /* Typing animation */
+    blink-caret 0.75s steps(1) 3.5s forwards; /* Cursor blinking ends with typing */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+
+p {
+  font-size: 16px;
+  color: #909090;
+}
+.banner-btn-black{
+  height: 56px;
+  width: 191px;
+  background-color: transparent;
+  color:white;
+  border : 2px solid white;
+  border-radius:06px;
+  margin-top:30px;
+}
+/* Banner Ends here */
+/* Side left banner start */
+#left-banner {
+  height: 600px;
+  width: 720px;
+  
+  display: flex; /* Enable flexbox layout */
+  flex-wrap: wrap; /* Allow items to wrap within the container if needed */
+}
+
+#side-bannerOne {
+  width: 100%; /* Full width for the first banner */
+  height: 328px; /* Adjust the height as needed */
+  
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+#ps5 {
+  width: 50%;
+  height: 310px;
+  margin-top: 15px;
+}
+
+#side-content {
+  width: 50%;
+  padding: 20px;
+}
+
+#side-text {
+  color: black;
+  margin: 0;
+  font-size: 50px;
+}
+
+#side-content h2 {
+  margin-top: 50px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#side-bannerTwo, #side-bannerThree {
+  width: 50%; /* Both banners will take up half the width */
+  height: 272px; /* Adjust the height as needed */
+  
+  display: flex;
+  align-items: center;
+  background-color: #EDEDED;
+}
+
+#side-bannerThree {
+  background-color: #353535; /* Different background for the third banner */
+}
+
+#pods, #vision {
+  width: 150px; /* Adjust the width as needed */
+  height: 220px;
+}
+
+#side-content2, #side-content3 {
+  width: 50%;
+  padding: 20px;
+}
+
+#side-text2, #side-text3 {
+  color: black;
+  font-size: 29px;
+  margin: 10px 0 0 0;
+  margin-left: 30px;
+}
+
+#side-content2 p, #side-content3 p , #rightside-content3 p{
+  margin-top: 10px;
+  color: #909090;
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#side-text3 {
+  color: white;
+}
+
+#side-bannerThree p {
+  color: #909090;
+}
+#pods {
+  width: 104px; /* Adjust the width as needed */
+  height: 260px;
+}
+#right-banner{
+  width:720px;
+  height:600px;
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: row;
+}
+#macbook{
+  width:292px;
+  height:502px;
+}
+.banner-btn-white{
+  height: 56px;
+  width: 191px;
+  background-color: transparent;
+  color:black;
+  border : 2px solid black;
+  border-radius:06px;
+  margin-top:30px;
+}
+/* Container for both banners */
+#banner-container {
+  display: flex; /* Align left and right banners horizontally */
+  width: 1440px; /* Total width (720px each) */
+  justify-content: space-between;
+}
+
+#left-banner {
+  height: 600px;
+  width: 720px;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Container for both banners */
+/* Container for both banners */
+/* Container for both banners */
+/* Container for both banners */
+#banner-container {
+  display: flex; /* Align left and right banners side by side */
+  width: 1440px; /* Total width (720px each) */
+}
+
+#left-banner {
+  height: 600px;
+  width: 720px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+
+#right-banner {
+  width: 860px; /* Total width */
+  height: 600px; /* Total height */
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between text and image */
+  padding: 20px;
+}
+
+#rightside-content3 {
+  display: flex;
+  flex-direction: column; /* Stack text and button vertically */
+  justify-content: center; /* Center text and button vertically */
+  width: 50%; /* Half the width for the text and button */
+}
+
+#rightside-text3 {
+  color: black;
+  font-size: 64px;
+  margin-left: 45px;
+}
+
+#rightside-content3 p {
+  margin-top: 10px;
+  color: #909090;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-left: 45px;
+}
+
+.banner-btn-white {
+  height: 56px;
+  width: 191px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 45px;
+  transition: background-color 0.5s ease, color 0.5s ease;  
+}
+.banner-btn-white:hover{
+  background-color: black;
+  color:white;
+  
+}
+.image-crop-container {
+  width: 292px; /* Width for visible portion of the image */
+  height: 568px; /* Height for visible portion of the image */
+  overflow: hidden; /* Hide overflow to create a cropped effect */
+  position: relative; /* Position relative for absolute child */
+}
+
+#macbook {
+  position: absolute; /* Absolute positioning for precise control */
+  bottom: 0; /* Stick to bottom */
+  left: auto; /* Reset left alignment */
+  right: 0; /* Stick to the right edge of the container */
+  width: auto; /* Maintain aspect ratio */
+  height: 100%; /* Fill the height of the container */
+}
+/* footer */
+.footer {
+  height: 504px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column; /* Stack contentBox and icon vertically */
+  justify-content: center;
+  align-items: center; /* Vertically center the contentBox */
+}
+
+.contentBox {
+  width: 1120px;
+  height: 256px;
+  
+  display: flex;
+  justify-content: space-between; /* Space between the left and right sections */
+  padding: 20px;
+  margin-bottom: 20px; /* Add some space between contentBox and icon */
+}
+
+/* Logo and Paragraph (Left) */
+.contentBox div {
+  width: 394px;
+  display: flex;
+  flex-direction: column; /* Stack logo on top of the paragraph */
+  align-items: flex-start; /* Align content to the left */
+}
+
+#logo {
+  width: 100px; /* Adjust the size of the logo */
+  margin-bottom: 10px; /* Add space between logo and paragraph */
+}
+
+.contentBox p {
+  color: #cfcfcf;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0; /* Remove default margin */
+  margin-top: 20px;
+  max-width: 400px; /* Limit width of the paragraph */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Services List (Right) */
+.services-list, .help-list {
+  display: flex;
+  flex-direction: column; /* Stack h3 on top of the list */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  color: white;
+  width: 295px;
+  height: 256px;
+  padding-left: 25px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px; /* Add space between heading and list */
+  color: white;
+  font-weight: bolder;
+}
+
+.services-list ul, .help-list ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.services-list li, .help-list li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 6px;
+  color: #cfcfcf;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Icon styling */
+#icon {
+  margin-top: 20px; /* Space between contentBox and icon */
+}
+
+#Icon {
+  height: 16px;
+  width: 173px;
+  margin-top: 25px;
+}
+p{
+  margin-top: 50px;
+}
+/* footer ends */
+#banner{
+  width: 100%;
+  margin-top:20px;
+}
+/* categories -list */
+.categories-list {
+  width: 100%;
+  height: 352px;
+   
+  display: flex;
+  
+  flex-direction: column; /* Set to column to allow heading above boxes */
+  align-items: center;
+  padding-top: 10px;
+}
+
+#category-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color:black;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold ;
+  margin-top: 30px;
+}
+
+.icon-boxes {
+  width: 1220px;
+  height: 128px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-box {
+  width: 160px;
+  height: 128px;
+  border-radius: 15px;
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column; /* Align icon and name vertically */
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s ease, height 0.5s ease; 
+}
+.single-box:hover{
+  width:170px;
+  height: 138px
+}
+.box-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-name {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+  color:black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  
+}
+/* category list ends here */
+/* container 2 */
+.container2{
+  width: 100%;
+  height: 1056px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.list-style{
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+  margin-bottom: 25px;
+}
+.list-style li{
+  font-size:24px;
+  color:#909090;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left:15px;
+}
+#first-li{
+  font-size:24px;
+  color:black;
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+}
+.product-container{
+  
+  height: 880px;
+  width: 1120px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top:25px;
+}
+.product-box{
+  
+  width: 268px;
+  height: 432px;
+  background-color: #F6F6F6;
+  display:flex;
+  flex-direction: column; /* Align icon and name vertically */
+  align-items: center;
+  justify-content: center;
+  border:2px solid rgb(233, 230, 230);
+  border-radius: 15px;
+}
+.product-pic{
+  height: 160px;
+  width: 160px;
+}
+.shopNow{
+  width: 188px;
+  height: 48px;
+  background-color: black;
+  border-radius:15px;
+  color:white;
+  margin-top:15px;
+  transition: background-color 0.5s ease, color 0.5s ease; 
+}
+.shopNow:hover{
+  background-color: transparent;
+  color:black;
+ border:2px solid black;
+}
+h4{
+  font-size:25px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.product-title{
+  color:black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding:5px;
+  margin-left: 12px;
+}
+/* container 2 ends */
+
+/* container3 */
+.container3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add space between boxes if needed */
+}
+
+.category-box {
+  width: 360px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding is included within box height */
+}
+
+.category-images {
+  width: 360px;
+  max-width: 300px;
+  height: 327px;
+  margin-bottom: 20px;
+}
+
+.category-heading {
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 10px 0;
+  color:black;
+}
+
+.category-description {
+  font-size: 15px;
+  color: #cfcfcf;
+  flex-grow: 1; /* Makes description occupy extra space to push button down */
+  margin: 10px 0;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.category-btn{
+  width: 170px;
+  padding:10px;
+  border-radius:05px;
+  border: 1px solid #000;
+  cursor: pointer;
+ margin-top: 0px; /* Aligns button at the bottom of the box */
+ 
 }
